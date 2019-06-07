@@ -2,6 +2,9 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 syntax on
 
+" Security recommendation as discussed on https://github.com/numirias/security/blob/master/doc/2019-06-04_ace-vim-neovim.md
+set nomodeline
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
