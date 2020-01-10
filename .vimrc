@@ -12,7 +12,6 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-airline/vim-airline'
-Plugin 'tomasr/molokai'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'scrooloose/nerdtree'
 
