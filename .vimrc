@@ -1,32 +1,36 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
-syntax on
+set nocompatible
+filetype off
 
-" Security recommendation as discussed on https://github.com/numirias/security/blob/master/doc/2019-06-04_ace-vim-neovim.md
-set nomodeline
-
-" set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
-Plugin 'vim-airline/vim-airline'
-Plugin 'jelera/vim-javascript-syntax'
+Plugin 'tpope/vim-rails'
+Plugin 'vim-ruby/vim-ruby'
 Plugin 'scrooloose/nerdtree'
+Plugin 'ervandew/supertab'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+call vundle#end()
 
-call vundle#end()            " required
-filetype plugin indent on    " required
-
-colorscheme molokai
-map <C-n> :NERDTreeToggle<CR>
-
-
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
+filetype plugin on
+filetype indent on
+syntax on
+set number
+set cursorline
+set shiftwidth=2
+set tabstop=2
+set expandtab
+set nobackup
+set scrolloff=10
+set nowrap
+set incsearch
+set ignorecase
+set hlsearch
+set wildmenu
+set wildmode=list:longest
+colorscheme zellner
+autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1 
+autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
+map <F5> :NERDTreeToggle<CR>
